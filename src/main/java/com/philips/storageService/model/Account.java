@@ -1,6 +1,6 @@
-package com.philips.storageService.models;
+package com.philips.storageservice.model;
 
-//import org.springframework.data.annotation.PersistenceConstructor;
+import org.springframework.data.cassandra.core.mapping.Column;
 import org.springframework.data.cassandra.core.mapping.PrimaryKey;
 import org.springframework.data.cassandra.core.mapping.Table;
 
@@ -8,9 +8,15 @@ import org.springframework.data.cassandra.core.mapping.Table;
 public class Account {
 
     @PrimaryKey
-    private String accountid;
-    private String email;
-    private String firstName;
+	private String accountid;
+	
+	@Column
+	private String email;
+	
+	@Column
+	private String firstName;
+	
+	@Column
     private String lastName;
 
     public Account(String accountid, String email, String firstName, String lastName){

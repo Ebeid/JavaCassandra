@@ -1,7 +1,7 @@
 CREATE KEYSPACE IF NOT EXISTS storageservice WITH replication = {'class': 'NetworkTopologyStrategy', 'datacenter1': '1'}  AND durable_writes = true;
 
 CREATE TABLE IF NOT EXISTS storageservice.accounts (
-    accountrid UUID,
+    accountid UUID,
     email varchar,
     firstname varchar,
     lastname varchar,
