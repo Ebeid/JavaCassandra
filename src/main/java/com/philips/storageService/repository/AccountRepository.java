@@ -11,12 +11,6 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AccountRepository extends CassandraRepository<Account, MapId>  {
-    //@Override
-
-
     @Query("select * from account")
     List<Account> findAll();
-
-    //@Override
-    //void delete(Account deleted);
 }
